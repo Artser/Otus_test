@@ -27,3 +27,4 @@ Prometheus будет доступен на порту 9090, grafana - 3000
 
 - Прописать в /etc/prometheus/prometheus.yml в секции job_name: node в поле
   targets - адрес исследуемой машины
+!!!
