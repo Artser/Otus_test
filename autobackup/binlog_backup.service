@@ -1,0 +1,16 @@
+[Unit]
+Description=Sync backup service 
+After=network.target
+
+[Service]
+Type=simple
+# example:
+# ExecStart=/home/taptap/.local/bin/binlog_backup.sh /home/taptap/backup /home/taptap/backup taptap 192.168.1.79
+ExecStart=/home/<user>/.local/bin/binlog_backup.sh <backup_dir> <remote_backup_dir> <remote_user> <remote_host>
+Restart=on-failure
+RestartSec=10
+User=root
+Group=root
+
+[Install]
+WantedBy=multi-user.target

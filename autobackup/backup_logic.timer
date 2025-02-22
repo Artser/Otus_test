@@ -1,0 +1,10 @@
+[Unit]
+Description=Run backup_logic.service weekly
+
+[Timer]
+OnActiveSec=1m
+OnCalendar=weekly
+Persistent=true
+
+[Install]
+WantedBy=timers.target

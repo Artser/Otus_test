@@ -1,0 +1,10 @@
+[Unit]
+Description=Run binlog_backup.service every hour
+
+[Timer]
+OnActiveSec=1m
+OnCalendar=hourly
+Persistent=true
+
+[Install]
+WantedBy=timers.target
